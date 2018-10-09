@@ -35,7 +35,15 @@ self.addEventListener('fetch', evt => {
                 return response;
             } else {
                 console.log(`${evt.request} is not found in cache. Fetching now.`);
-                return fetch(evt.request);
+                return fetch(evt.request)
+                    .then( response => {
+                        let responseCopy = response.clone();
+                        caches.open('v1.0').then( cache => {
+                            cache.put(evt.request, responseCopy);
+                        })
+                        return response;
+                    })
+                    .catch( error => console.log(error));
             }
         })
     );
