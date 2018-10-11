@@ -1,6 +1,5 @@
 @charset "utf-8";
 /* CSS Document */
-
 body, td, th, p{
 	font-family: Arial, Helvetica, sans-serif;
 	font-size: 10pt;
@@ -49,6 +48,7 @@ article, aside, canvas, details, figcaption, figure, footer, header, hgroup, men
   padding: 25px;
   text-align: center;
   text-transform: uppercase;
+  /* width: calc(50% + 200px); */
   /* max-width: 100%; */
 }
 /* ====================== Navigation ====================== */
@@ -74,7 +74,8 @@ nav h1 a {
     background-color: #eee;
     font-size: 17px;
     margin: 0;
-    width: calc(50% - 80px);
+    width: 100%;
+    
 }
 
 /* Display list items side by side */
@@ -103,6 +104,7 @@ nav h1 a {
 /* ====================== Map ====================== */
 #map {
   height: 400px;
+  /* width: 0; */
   width: 100%;
   background-color: #ccc;
 }
@@ -204,17 +206,19 @@ nav h1 a {
   position: fixed;
   right: 0;
   top: 80px;
-  width: 50%;
+  /* width: 50%; */
+  width: 0;
 }
 .inside #map {
   background-color: #ccc;
   height: 100%;
-  width: 100%;
+  /* width: 100%; */
+  width: 0;
 }
 .inside #footer {
   bottom: 0;
   position: absolute;
-  width: 45%;
+  /* width: 50%; */
 }
 #restaurant-name {
   color: #f18200;
@@ -228,7 +232,7 @@ nav h1 a {
 }
 #restaurant-img {
   max-width: 600px;
-	width: 90%;
+	width: 100%;
 }
 #restaurant-address {
   font-size: 12pt;
@@ -245,14 +249,12 @@ nav h1 a {
   text-align: center;
   text-transform: uppercase;
   max-width: 600px;
-	width: 90%;
+	width: 100%;
 }
 #restaurant-container, #reviews-container {
   border-bottom: 1px solid #d9d9d9;
   border-top: 1px solid #fff;
   padding: 140px 40px 30px;
-  /* max-width: 600px; */
-  width: 50%;
 }
 #reviews-container {
   padding: 30px 40px 80px;
@@ -286,4 +288,34 @@ nav h1 a {
 }
 #restaurant-hours td {
   color: #666;
+}
+
+@media only screen and (min-width: 48em) {
+  #restaurants-list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  #restaurant-container, #reviews-container {
+    max-width: 700px;
+    width: 50%;
+  }
+  #breadcrumb {
+    width: calc(50% - 153px);
+  }
+  #footer {
+    width: calc(100% - 50px);
+  }
+  .inside #map-container {
+    width: 50%;
+  }
+  .inside #map {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 49em) {
+  #restaurant-cuisine, #restaurant-img {
+    max-width: 400px;
+  }
 }
