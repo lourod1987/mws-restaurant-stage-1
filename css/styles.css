@@ -37,8 +37,6 @@ article, aside, canvas, details, figcaption, figure, footer, header, hgroup, men
 #maincontent {
   background-color: #f3f3f3;
   min-height: 100%;
-  /* max-width: 800px; */
-  /* width: 50%; */
 }
 #footer {
   background-color: #444;
@@ -48,8 +46,6 @@ article, aside, canvas, details, figcaption, figure, footer, header, hgroup, men
   padding: 25px;
   text-align: center;
   text-transform: uppercase;
-  /* width: calc(50% + 200px); */
-  /* max-width: 100%; */
 }
 /* ====================== Navigation ====================== */
 nav {
@@ -67,6 +63,7 @@ nav h1 a {
   font-weight: 200;
   letter-spacing: 10px;
   text-transform: uppercase;
+  margin-top: 40px;
 }
 #breadcrumb {
     padding: 10px 40px 16px;
@@ -104,7 +101,6 @@ nav h1 a {
 /* ====================== Map ====================== */
 #map {
   height: 400px;
-  /* width: 0; */
   width: 100%;
   background-color: #ccc;
 }
@@ -206,19 +202,16 @@ nav h1 a {
   position: fixed;
   right: 0;
   top: 80px;
-  /* width: 50%; */
   width: 0;
 }
 .inside #map {
   background-color: #ccc;
   height: 100%;
-  /* width: 100%; */
   width: 0;
 }
 .inside #footer {
   bottom: 0;
   position: absolute;
-  /* width: 50%; */
 }
 #restaurant-name {
   color: #f18200;
@@ -301,7 +294,7 @@ nav h1 a {
     width: 50%;
   }
   #breadcrumb {
-    width: calc(50% - 153px);
+    width: calc(50% - 80px);
   }
   #footer {
     width: calc(100% - 50px);
@@ -314,8 +307,14 @@ nav h1 a {
   }
 }
 
-@media only screen and (max-width: 49em) {
+@media only screen and (max-width: 50em) {
   #restaurant-cuisine, #restaurant-img {
-    max-width: 400px;
+    max-width: 350px;
+  }
+  #restaurant-container {
+    padding: 140px 20px 20px 20px;
+  }
+  #reviews-container {
+    padding: 20px;
   }
 }
