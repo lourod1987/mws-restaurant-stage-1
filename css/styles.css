@@ -324,9 +324,3 @@ nav h1 a {
 :focus {
   background-color: yellow;
 }
-/* 
-@media only screen and (max-width: 70em) {
-  #restaurant-cuisine, #restaurant-img {
-    max-width: 400px;
-  }
-} */
