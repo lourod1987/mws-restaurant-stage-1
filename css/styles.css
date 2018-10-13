@@ -211,7 +211,6 @@ nav h1 a {
 }
 .inside #footer {
   bottom: 0;
-  position: absolute;
 }
 #restaurant-name {
   color: #f18200;
@@ -299,6 +298,9 @@ nav h1 a {
   #footer {
     width: calc(100% - 50px);
   }
+  .inside #footer {
+    position: absolute;
+  }
   .inside #map-container {
     width: 50%;
   }
@@ -307,7 +309,7 @@ nav h1 a {
   }
 }
 
-@media only screen and (max-width: 50em) {
+@media only screen and (max-width: 80em) {
   #restaurant-cuisine, #restaurant-img {
     max-width: 350px;
   }
@@ -318,3 +320,13 @@ nav h1 a {
     padding: 20px;
   }
 }
+
+:focus {
+  background-color: yellow;
+}
+/* 
+@media only screen and (max-width: 70em) {
+  #restaurant-cuisine, #restaurant-img {
+    max-width: 400px;
+  }
+} */
