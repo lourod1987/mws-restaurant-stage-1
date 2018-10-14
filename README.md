@@ -1,32 +1,39 @@
-# Mobile Web Specialist Certification Course
----
-#### _Three Stage Course Material Project - Restaurant Reviews_
+# Mobile Web Specialist Restaurant Reviews App: Stage 1
 
-## Project Overview: Stage 1
+This application is for restaurant reviews in New York's metropolitan area. The application allows users to filter through fixed results and view details on each restaurant.
 
-For the **Restaurant Reviews** projects, you will incrementally convert a static webpage to a mobile-ready web application. In **Stage One**, you will take a static design that lacks accessibility and convert the design to be responsive on different sized displays and accessible for screen reader use. You will also add a service worker to begin the process of creating a seamless offline experience for your users.
+## Run the application
+1)
+    * To retrieve the files you can fork and clone, or directly clone the repository from this page.
+    * If you are downloading the files, unzip them, and extract the files to where you want them in your directory.
+2)
+    * In the directory you chose, start up a simple HTTP server to serve up the site files on your local computer. Python has some simple tools to do this, and you don't even need to know Python. For most people, it's already installed on your computer. 
+    
+    * In a terminal, check the version of Python you have: `python -V`. If you have Python 2.x, spin up the server with `python -m SimpleHTTPServer 8000` (or some other port, if port 8000 is already in use.) For Python 3.x, you can use `python3 -m http.server 8000`. If you don't have Python installed, navigate to Python's [website](https://www.python.org/) to download and install the software.
 
-### Specification
+    * Once your server is running, visit the site: `http://localhost:8000`. To view the project.
+    
+    #### Follow steps in either 2 Or 3
+3)
+    * Alternatively you can serve the files using http-server.
 
-You have been provided the code for a restaurant reviews website. The code has a lot of issues. It’s barely usable on a desktop browser, much less a mobile device. It also doesn’t include any standard accessibility features, and it doesn’t work offline at all. Your job is to update the code to resolve these issues while still maintaining the included functionality. 
+    * To install enter ```npm install http-server -g``` in your terminal.
 
-### What do I do from here?
+    * In order for this work properly you'll need to change line 13 in the file dbhelper.js to read like this ```return `http://127.0.0.1:${port}/data/restaurants.json`;```.
 
-1. In this folder, start up a simple HTTP server to serve up the site files on your local computer. Python has some simple tools to do this, and you don't even need to know Python. For most people, it's already installed on your computer. 
+    * Once http-server is installed and dbhelper.js has been changed enter ```http-server -p 8000 -o``` in your terminal to run the file server.
+        * Note: the -p flag allows you to set the port to 8000 and the -o flag opens a tab in your default browser.
+    
+    * The application should now run.
 
-In a terminal, check the version of Python you have: `python -V`. If you have Python 2.x, spin up the server with `python -m SimpleHTTPServer 8000` (or some other port, if port 8000 is already in use.) For Python 3.x, you can use `python3 -m http.server 8000`. If you don't have Python installed, navigate to Python's [website](https://www.python.org/) to download and install the software.
+    * For additional information on http-server visit [npm http-server](https://www.npmjs.com/package/http-server).
 
-2. With your server running, visit the site: `http://localhost:8000`, and look around for a bit to see what the current experience looks like.
-3. Explore the provided code, and start making a plan to implement the required features in three areas: responsive design, accessibility and offline use.
-4. Write code to implement the updates to get this site on its way to being a mobile-ready website.
+
+## Using the application
+A list of restaurants will appear on the main page which can be filtered to display only desired results.
+
+Clicking view details on a restaurant will bring you to a page that displays additional information about each restaurant.
 
 ## Leaflet.js and Mapbox:
 
-This repository uses [leafletjs](https://leafletjs.com/) with [Mapbox](https://www.mapbox.com/). You need to replace `<your MAPBOX API KEY HERE>` with a token from [Mapbox](https://www.mapbox.com/). Mapbox is free to use, and does not require any payment information. 
-
-### Note about ES6
-
-Most of the code in this project has been written to the ES6 JavaScript specification for compatibility with modern web browsers and future proofing JavaScript code. As much as possible, try to maintain use of ES6 in any additional JavaScript you write. 
-
-
-
+This repository uses [leafletjs](https://leafletjs.com/) with [Mapbox](https://www.mapbox.com/). Click on the links for additional information on these technologies.
