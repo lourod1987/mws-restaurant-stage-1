@@ -191,23 +191,19 @@ nav h1 a {
 
 /* ====================== Restaurant Details ====================== */
 .inside header {
-  position: fixed;
   top: 0;
   width: 100%;
   z-index: 1000;
 }
 .inside #map-container {
   background: blue none repeat scroll 0 0;
-  height: 87%;
-  position: fixed;
-  right: 0;
-  top: 80px;
-  width: 0;
+  height: 350px;
+  width: 100%;
 }
 .inside #map {
   background-color: #ccc;
   height: 100%;
-  width: 0;
+  width: 100%;
 }
 .inside #footer {
   bottom: 0;
@@ -246,7 +242,7 @@ nav h1 a {
 #restaurant-container, #reviews-container {
   border-bottom: 1px solid #d9d9d9;
   border-top: 1px solid #fff;
-  padding: 140px 40px 30px;
+  padding: 40px 40px 30px;
 }
 #reviews-container {
   padding: 30px 40px 80px;
@@ -291,6 +287,7 @@ nav h1 a {
   #restaurant-container, #reviews-container {
     max-width: 700px;
     width: 50%;
+    top: 0;
   }
   #breadcrumb {
     width: calc(50% - 80px);
@@ -302,14 +299,24 @@ nav h1 a {
     position: absolute;
   }
   .inside #map-container {
+    background: blue none repeat scroll 0 0;
+    height: 100%;
+    position: fixed;
+    right: 0;
+    top: 80px;
     width: 50%;
   }
   .inside #map {
+    background-color: #ccc;
+    height: 100%;
     width: 100%;
+  }
+  .inside header {
+    position: fixed;
   }
 }
 
-@media only screen and (max-width: 80em) {
+@media only screen and (min-width: 48em) and (max-width: 80em) {
   #restaurant-cuisine, #restaurant-img {
     max-width: 350px;
   }
